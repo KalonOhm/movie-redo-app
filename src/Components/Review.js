@@ -14,9 +14,9 @@ export default class Review extends Component {
           reviewList: [
             {
             id: 0,
-            reviewerName: "Kalon Ohmstede",
-            reviewText: "this is my review",
-            reviewRating: 4,
+            name: "Kalon Ohmstede",
+            text: "this is my review",
+            rating: 4,
             }
           ],
         };
@@ -44,8 +44,8 @@ export default class Review extends Component {
                 submitReview={this.submitReview}
                 reviewList={this.state.reviewList}
               />
-              {/* {console.log(this.addReview)} */}
-              <ReviewList reviewList={this.state.reviewList} />
+              {console.log(this.addReview)}
+              {/* <ReviewList reviewList={this.state.reviewList} /> */}
               {console.log(this.state.reviewList)}
             </div>
           </>

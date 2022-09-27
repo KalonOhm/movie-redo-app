@@ -2,8 +2,6 @@
 
 //imports
 import React, { Component } from "react";
-import ReviewForm from "./ReviewForm";
-import ReviewList from "./ReviewList";
 import Review from "./Review";
 //review list will list reviews
 //review form will be a form, data will add a new review to review list
@@ -34,16 +32,11 @@ export default class Movie extends Component {
           <hr></hr>
           <p>Synopsis: {this.props.Synopsis}</p>
         </div>
-        <br />
+        <hr />
         <div>
           <Review />
         </div>
-        {/* <div>
-          <ReviewForm />
-        </div> */}
-        {/* <div>
-          <ReviewList />
-        </div> */}
+        <hr />
       </div>
     );
   }

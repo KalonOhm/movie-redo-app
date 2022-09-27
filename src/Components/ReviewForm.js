@@ -5,7 +5,7 @@ stored in an array, no networking or database needed for this assignment. */
 //imports
 import React, { Component } from "react";
 import StarRating from './StarRating';
-import Review from './Review';
+
 
 export default class ReviewForm extends Component {
   constructor(props) {
@@ -70,8 +70,8 @@ export default class ReviewForm extends Component {
             className='form-control'
             name='rating'
             onChange={this.onChange}
-            value={this.state.rating}
-            label='Your rating our of 5'
+            value={this.state.rating.value}
+            label='Your rating out of 5'
           />
 
           <button className="btn btn-success" type="submit" onClick={this.onSubmit}>

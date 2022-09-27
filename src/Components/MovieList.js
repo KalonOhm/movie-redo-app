@@ -46,8 +46,8 @@ export default class MovieList extends Component {
         <h1 className="mt-4 p-5 rounded">Rate these movies!</h1>
         <div className="row">
           <Movie {...sampleMovie} />
-          <Movie {...sampleMovie2} />
-          <Movie {...sampleMovie3} />
+          {/* <Movie {...sampleMovie2} />
+          <Movie {...sampleMovie3} /> */}
         </div>
       </div>
     );
