@@ -15,7 +15,7 @@ export default class Review extends Component {
             {
             id: 0,
             name: "Kalon Ohmstede",
-            text: "this is my review",
+            text: "Well, obviously I like it. ",
             rating: 4,
             }
           ],
@@ -38,14 +38,14 @@ export default class Review extends Component {
       render() {
         return (
           <>
-            <div key="review">
-              <br></br>
+            <div key="review" >
+              
               <ReviewForm
                 submitReview={this.submitReview}
                 reviewList={this.state.reviewList}
               />
               {console.log(this.addReview)}
-              {/* <ReviewList reviewList={this.state.reviewList} /> */}
+              <ReviewList reviewList={this.state.reviewList} />
               {console.log(this.state.reviewList)}
             </div>
           </>

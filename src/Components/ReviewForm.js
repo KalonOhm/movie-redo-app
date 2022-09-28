@@ -37,25 +37,27 @@ export default class ReviewForm extends Component {
     //resetInput();
   };
 
-  //onChange each input needs an onChange property onChange={onChange etc}
+  //onChange sets state to adjust with changes to the text input
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
+    console.log("checking onChange:", e.target.value);
   };
 
   render() {
     return (
       <>
         <h5> Add your review!</h5>
-        <form className="form">
+        <form className="form" onSubmit={this.onSubmit} key='reviewForm' id="review-form">
           <input
             className="form-control"
             name="name"
             type="text"
             onChange={this.onChange}
             value={this.state.name}
-            label="User Name"
+            label="User Name" 
+            placeholder="Your name ..."
           />
-
+          
           <textarea
             className="form-control"
             name="text"
@@ -64,19 +66,26 @@ export default class ReviewForm extends Component {
             value={this.state.text}
             label="Write a review"
             rows="5"
+            placeholder="Your review here ..."
           />
 
-          <StarRating 
-            className='form-control'
-            name='rating'
-            onChange={this.onChange}
-            value={this.state.rating.value}
-            label='Your rating out of 5'
-          />
+          <div >
+            <StarRating 
+              className='form-control'
+              name='rating'
+              onChange={this.onChange}
+              value={this.state.ratingValue}
+              label='Your rating out of 5'
+            />
+          </div>
 
           <button className="btn btn-success" type="submit" onClick={this.onSubmit}>
             Submit Review
           </button>
+          <br></br>
+          <br></br>
+          <hr></hr>
+          <br></br>
         </form>
       </>
     );

@@ -20,8 +20,9 @@ const StarRating = () => {
             onClick={() => setRating(ratingValue)}
             onMouseEnter={() => setHover(ratingValue)}
             onMouseLeave={() => setHover(rating)}
+            value={ratingValue}
           >
-            <span className="star">&#9733;</span>
+            <span className="star fs-2">&#9733;</span>
           </button>
         );
       })}
